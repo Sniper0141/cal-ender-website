@@ -29,10 +29,10 @@ export default function Home() {
         </div>
 
         <div className={styles.feature}>
-          <h2 className={styles.featureTitle}>Teleport-Friendly UI</h2>
+          <h2 className={styles.featureTitle}>Fighting Discrimination</h2>
           <p className={styles.featureDescription}>
-            Large touch targets and intuitive gestures make it easy to use even while teleporting.
-            Never miss an important date again!
+            By providing an accessible, dark-mode-first calendar, we're taking a stand against digital discrimination. 
+            Every Enderman deserves equal access to time management tools, regardless of their light sensitivity.
           </p>
         </div>
       </section>
