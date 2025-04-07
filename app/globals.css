@@ -1,6 +1,10 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Enderman-friendly color scheme */
+  --background: #000000;
+  --background-secondary: #141414;
+  --text-primary: #aaaaaa;
+  --text-secondary: #de7afa;
+  --accent: #c800fa;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,9 +21,9 @@ body {
 }
 
 body {
-  color: var(--foreground);
+  color: var(--text-primary);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -31,8 +35,31 @@ body {
 }
 
 a {
-  color: inherit;
+  color: var(--text-secondary);
   text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+/* Custom scrollbar for Enderman aesthetics */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-secondary);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
 }
 
 @media (prefers-color-scheme: dark) {
