@@ -1,11 +1,6 @@
-import { Geist } from "next/font/google";
 import { Press_Start_2P } from "next/font/google";
+import { GeistSans } from 'geist/font';
 import "./globals.css";
-
-const geist = Geist({
-  subsets: ["latin"],
-  variable: "--font-geist-sans",
-});
 
 const pixelFont = Press_Start_2P({
   weight: '400',
@@ -15,7 +10,7 @@ const pixelFont = Press_Start_2P({
 
 export const metadata = {
   title: "CalEnder - A Calendar App for Endermen",
-  description: "The first calendar app designed specifically for Endermen, featuring a soothing dark mode interface that's easy on Enderman eyes.",
+  description: "The first calendar app designed specifically for Endermen, featuring a soothing dark interface that's easy on Enderman eyes.",
   icons: {
     icon: [
       {
@@ -46,12 +41,15 @@ export const metadata = {
       },
     ],
   },
+};
+
+export const viewport = {
   themeColor: '#000000',
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${geist.variable} ${pixelFont.variable}`}>
+    <html lang="en" className={`${GeistSans.variable} ${pixelFont.variable}`}>
       <body>
         {children}
       </body>
