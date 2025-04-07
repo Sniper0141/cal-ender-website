@@ -1,19 +1,14 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
+const geist = Geist({
+  subsets: ["latin"],
   variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
 });
 
 export const metadata = {
-  title: "Cal-ender",
-  description: "Your personal calendar and task manager",
+  title: "CalEnder - A Calendar App for Endermen",
+  description: "The first calendar app designed specifically for Endermen, featuring a soothing dark mode interface that's easy on Enderman eyes.",
   icons: {
     icon: [
       {
@@ -44,12 +39,13 @@ export const metadata = {
       },
     ],
   },
+  themeColor: '#000000',
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="en" className={geist.variable}>
+      <body>
         {children}
       </body>
     </html>
