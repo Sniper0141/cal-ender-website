@@ -1,14 +1,55 @@
+import Image from 'next/image';
 import styles from './page.module.css';
 
 export default function Home() {
   return (
     <main className={styles.main}>
       <section className={styles.hero}>
+        <div className={styles.logoContainer}>
+          <Image
+            src="/apple-icon.png"
+            alt="CalEnder Logo"
+            width={120}
+            height={120}
+            priority
+            className={styles.logo}
+          />
+        </div>
         <h1 className={styles.title}>CalEnder</h1>
         <p className={styles.subtitle}>
           The first calendar app designed specifically for Endermen, featuring a soothing dark interface
           that's easy on Enderman eyes. Because everyone deserves a comfortable digital experience.
         </p>
+      </section>
+
+      <section className={styles.screenshots}>
+        <div className={styles.screenshotWrapper}>
+          <Image
+            src="/calendar-view.jpg"
+            alt="CalEnder Calendar View"
+            fill
+            className={styles.screenshot}
+            priority
+          />
+        </div>
+        <div className={styles.screenshotWrapper}>
+          <Image
+            src="/settings-view.jpg"
+            alt="CalEnder Settings with Haptic Feedback"
+            fill
+            className={styles.screenshot}
+            priority
+          />
+        </div>
+        <div className={styles.screenshotWrapper}>
+          <Image
+            src="/new-appointment.jpg"
+            alt="CalEnder New Appointment Form"
+            fill
+            className={styles.screenshot}
+            priority
+          />
+        </div>
       </section>
 
       <section className={styles.features}>
