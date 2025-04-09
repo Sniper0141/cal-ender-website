@@ -79,7 +79,7 @@ export default function Home() {
       </section>
 
       <section className={styles.cta}>
-        <a href="#download" className={styles.button}>
+        <a href="https://expo.dev/artifacts/eas/uFDYd7DVDeB17hbg4coKQt.apk" className={styles.button}>
           Download for End Devices
         </a>
       </section>
